@@ -1,0 +1,292 @@
+<html>
+    <head>
+        <title>Bài 48  - Đặng Lê Thảo Vy</title>
+        <style>
+            body {
+                font-family: "Times New Roman", serif;
+            }
+
+            /* Khung form */
+            #container {
+                width: 600px;
+                margin: auto;
+                background-color: #99ccff;
+                padding: 10px 30px;
+                box-sizing: border-box;
+            }
+
+            /* Logo */
+            #logo {
+                text-align: center;
+            }
+
+            #logo img {
+                width: 250px;
+            }
+
+            /* Tiêu đề */
+            h2 {
+                text-align: center;
+            }
+
+            .description {
+                text-align: center;
+                font-size: 13px;
+            }
+
+            /* Bảng dùng để căn các thành phần form */
+            table {
+                width: 100%;
+                font-size: 13px;
+            }
+
+            td {
+                padding: 3px;
+            }
+
+            /* Cột tên trường */
+            .label {
+                width: 170px;
+            }
+
+            /* Đường phân cách */
+            .line {
+                border-bottom: 1px solid gray;
+                padding-bottom: 10px;
+            }
+
+            /* Ô comment */
+            textarea {
+                width: 300px;
+                height: 80px;
+            }
+
+            /* Hai nút */
+            #buttons {
+                text-align: center;
+                margin-top: 5px;
+            }
+        </style>
+
+        <script>
+            function registerForm() {
+                alert("Đăng ký");
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="container">
+
+            <!-- LOGO -->
+            <div id="logo">
+                <img src="/Ex48/hinh/Jackson.gif" alt="Jackson Electronics">
+            </div>
+
+            <h2>Registration Form</h2>
+
+            <p class="description">
+                Register your Jackson Electronics product here
+            </p>
+
+            <!-- FORM -->
+            <form>
+
+                <table>
+
+                    <!-- FIRST NAME + LAST NAME -->
+                    <tr>
+                        <td class="label">First Name:</td>
+
+                        <td>
+                            <input type="text" name="firstname">
+                        </td>
+
+                        <td>
+                            Last Name:
+                            <input type="text" name="lastname">
+                        </td>
+                    </tr>
+
+
+                    <!-- ADDRESS 1 -->
+                    <tr>
+                        <td class="label">Address #1:</td>
+
+                        <td colspan="2">
+                            <input type="text" name="address1">
+                        </td>
+                    </tr>
+
+
+                    <!-- ADDRESS 2 -->
+                    <tr>
+                        <td class="label">Address #2:</td>
+
+                        <td colspan="2">
+                            <input type="text" name="address2">
+                        </td>
+                    </tr>
+
+                    <!-- CITY / STATE / ZIP -->
+                    <tr>
+                        <td class="label">City:</td>
+
+                        <td colspan="2">
+                            <input type="text" name="city">
+
+                            State:
+                            <input type="text" name="state" size="5">
+
+                            Zip:
+                            <input type="text" name="zip" size="8">
+                        </td>
+                    </tr>
+
+                    <!-- COUNTRY -->
+                    <tr>
+                        <td class="label line">Country:</td>
+
+                        <td colspan="2" class="line">
+                            <input type="text"
+                                name="country"
+                                value="United States">
+                        </td>
+                    </tr>
+
+                    <!-- PRODUCT -->
+                    <tr>
+                        <td class="label">Product:</td>
+
+                        <td colspan="2">
+                            <select name="product">
+                                <option>ScanMaster</option>
+                                <option>LaserPrint</option>
+                                <option>PrintMaster</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- DATE PURCHASED -->
+                    <tr>
+                        <td class="label">Date Purchased:</td>
+
+                        <td colspan="2">
+                            <input type="text" name="date">
+                        </td>
+                    </tr>
+
+                    <!-- SERIAL NUMBER -->
+                    <tr>
+                        <td class="label">Serial #:</td>
+
+                        <td colspan="2">
+                            <input type="text" name="serial">
+                        </td>
+                    </tr>
+
+                    <!-- USED FOR -->
+                    <tr>
+                        <td class="label">
+                            Used for:
+                        </td>
+
+                        <td>
+                            <input type="radio"
+                                name="usedfor"
+                                value="home">
+                            Home
+                            <br>
+
+                            <input type="radio"
+                                name="usedfor"
+                                value="business">
+                            Business
+                            <br>
+
+                            <input type="radio"
+                                name="usedfor"
+                                value="government">
+                            Government
+                        </td>
+
+                        <td>
+                            <input type="radio"
+                                name="usedfor"
+                                value="education">
+                            Educational Institution
+                            <br>
+
+                            <input type="radio"
+                                name="usedfor"
+                                value="other">
+                            Other
+                        </td>
+                    </tr>
+
+                    <!-- SYSTEM -->
+                    <tr>
+                        <td class="label line">
+                            System (check all that apply):
+                        </td>
+
+                        <td class="line">
+                            <input type="checkbox"
+                                name="system"
+                                value="windows">
+                            Windows
+                            <br>
+
+                            <input type="checkbox"
+                                name="system"
+                                value="macintosh">
+                            Macintosh
+                        </td>
+
+                        <td class="line">
+                            <input type="checkbox"
+                                name="system"
+                                value="unix">
+                            UNIX
+                            <br>
+
+                            <input type="checkbox"
+                                name="system"
+                                value="other">
+                            Other
+                        </td>
+                    </tr>
+
+                    <!-- COMMENTS -->
+                    <tr>
+                        <td class="label">
+                            Comments?:
+                        </td>
+
+                        <td colspan="2">
+                            <textarea name="comments"></textarea>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <!-- BUTTON -->
+                <div id="buttons">
+
+                    <input type="button"
+                        value="Click to register"
+                        onclick="registerForm()">
+
+                    <input type="reset"
+                        value="Click to cancel">
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </body>
+</html>
