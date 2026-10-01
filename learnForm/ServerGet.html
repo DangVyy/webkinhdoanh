@@ -1,15 +1,18 @@
+<html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="utf-8">
+    <title>Server Get</title>
 
     <script>
         function getUrlVars() {
             var vars = {};
 
-            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
-                function (m, key, value) {
+            window.location.href.replace(
+                /[?&]+([^=&]+)=([^&]*)/gi,
+                function(m, key, value) {
                     vars[key] = value;
-                });
+                }
+            );
 
             return vars;
         }
@@ -20,22 +23,21 @@
 </head>
 
 <body>
-    <form>
-        <table border="1">
-            <tr>
-                <td>User:</td>
-                <td id="iduser"></td>
-            </tr>
+    <table border="1">
+        <tr>
+            <td>User:</td>
+            <td id="iduser"></td>
+        </tr>
 
-            <tr>
-                <td>Email:</td>
-                <td id="idemail"></td>
-            </tr>
-        </table>
-    </form>
+        <tr>
+            <td>Email:</td>
+            <td id="idemail"></td>
+        </tr>
+    </table>
 
     <script>
         document.getElementById("iduser").innerHTML = ten;
         document.getElementById("idemail").innerHTML = email;
     </script>
 </body>
+</html>
