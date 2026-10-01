@@ -1,0 +1,51 @@
+<html>
+    <head> 
+        <title> Tiêu đề trang </title>
+    </head>
+    <body> 
+       <form name="myform">
+            <fieldset>
+                <legend> Thông tin cá nhân </legend>
+                <table>
+                    <tr>
+                        <td> Họ tên: </td>
+                        <td>
+                            <input type="text" name="txtten">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Giới tính: </td>
+                        <td>
+                            <input type="radio" name="rdgioitinh" value="Nam"> Nam
+                            <input type="radio" name="rdgioitinh" value="Nữ"> Nữ
+                    </tr>
+                    <tr>
+                        <td> Ngày sinh:</td>
+                        <td>
+                            <input type="date" name="txtngaysinh">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Quốc tịch: </td>
+                        <td>
+                            <select name="cbquoctich">
+                                <option value="VN"> Việt Nam </option>
+                                <option value="US"> Mỹ </option>
+                                <option value="JP"> Nhật Bản </option>
+                            </select>
+                    </tr>
+                    <tr>
+                        <td> Email: </td>
+                        <td>
+                            <input type="text" name="txtemail">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="button" value="Gửi thông tin" onclick="alert('Họ tên: '+myform.txtten.value+'\nEmail: '+myform.txtemail.value)">
+                        </td>
+                    </tr>
+            </fieldset>
+       </form>
+    </body>
+</html>
